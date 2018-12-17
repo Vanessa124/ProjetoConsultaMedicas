@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sp.senai.br.consultamedicas">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/agenda"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/agenda"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListaMedicos"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CadastroConsulta"
+            android:label="@string/title_activity_cadastro_consulta"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sp.senai.br.consultamedicas.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListaConsultas"
+            android:label="@string/title_activity_lista_consultas"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sp.senai.br.consultamedicas.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
